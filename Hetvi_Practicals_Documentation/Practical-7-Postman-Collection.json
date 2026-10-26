@@ -1,0 +1,41 @@
+{
+  "info": {
+    "name": "Practical 7 - Student Records REST API (Hetvi Patel)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. GET All Students",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5011/api/v1/students"
+      }
+    },
+    {
+      "name": "2. POST Create Student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"rollNumber\": \"HP202504\",\n  \"fullName\": \"Devam Shah\",\n  \"department\": \"Computer Science\",\n  \"gpa\": 9.5\n}"
+        },
+        "url": "http://localhost:5011/api/v1/students"
+      }
+    },
+    {
+      "name": "3. GET Student by Roll",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5011/api/v1/students/roll/HP202501"
+      }
+    },
+    {
+      "name": "4. DELETE Student",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5011/api/v1/students/1"
+      }
+    }
+  ]
+}
